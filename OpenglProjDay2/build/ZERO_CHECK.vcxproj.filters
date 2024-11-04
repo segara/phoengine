@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\git\phoengine\OpenglProjDay2\build\CMakeFiles\1ade77f162e6c00c4095a1dfa1ee7c97\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E149AD66-75B4-38C4-A0C2-DBCDE781ABC6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

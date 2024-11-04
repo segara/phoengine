@@ -1,0 +1,9 @@
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/spdlog.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/PACKAGE.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/INSTALL.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/ALL_BUILD.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/ZERO_CHECK.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/example.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/PACKAGE.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/INSTALL.dir
+C:/git_project/OpenglProj/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/ALL_BUILD.dir

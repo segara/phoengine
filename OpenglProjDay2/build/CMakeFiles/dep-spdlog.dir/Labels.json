@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/dep-spdlog"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/1ade77f162e6c00c4095a1dfa1ee7c97/dep-spdlog.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/a8b086925af6881098f014cd5490c553/dep-spdlog-complete.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-build.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-configure.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-download.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-install.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-mkdir.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-patch.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-test.rule"
+		},
+		{
+			"file" : "D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/d96466213799a6590ab77b088fce5c95/dep-spdlog-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"dep-spdlog"
+		],
+		"name" : "dep-spdlog"
+	}
+}

@@ -1,0 +1,10 @@
+^D:\GIT\PHOENGINE\OPENGLPROJDAY2\BUILD\DEP_GLFW-PREFIX\SRC\DEP_GLFW-BUILD\CMAKEFILES\8D26CBF5A0CDAF38A21F99D5C8D75765\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw -BD:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/GLFW.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,15 @@
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\context.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\context.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\init.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\init.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\input.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\input.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\monitor.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\monitor.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\vulkan.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\vulkan.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\window.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\window.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\win32_init.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\win32_init.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\win32_joystick.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\win32_joystick.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\win32_monitor.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\win32_monitor.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\win32_time.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\win32_time.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\win32_thread.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\win32_thread.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\win32_window.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\win32_window.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\wgl_context.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\wgl_context.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\egl_context.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\egl_context.obj
+D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw\src\osmesa_context.c;D:\git\phoengine\OpenglProjDay2\build\dep_glfw-prefix\src\dep_glfw-build\src\glfw.dir\Debug\osmesa_context.obj

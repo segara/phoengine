@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/dep_glfw"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/be3fb359a20894ae5b233d85e3ea0995/dep_glfw.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/c63799e2fab5a057622866fee70a8cfa/dep_glfw-complete.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-build.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-configure.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-download.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-install.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-mkdir.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-patch.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-test.rule"
+		},
+		{
+			"file" : "C:/git_project/OpenglProj/build/CMakeFiles/85e096099d7aa5fddbf724abf1b12b33/dep_glfw-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"dep_glfw"
+		],
+		"name" : "dep_glfw"
+	}
+}

@@ -1,0 +1,5 @@
+C:/git_project/OpenglProj/build/CMakeFiles/cmake_opengl_example.dir
+C:/git_project/OpenglProj/build/CMakeFiles/dep-spdlog.dir
+C:/git_project/OpenglProj/build/CMakeFiles/dep_glfw.dir
+C:/git_project/OpenglProj/build/CMakeFiles/ALL_BUILD.dir
+C:/git_project/OpenglProj/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,14 @@
+# Target labels
+ dep-spdlog
+# Source files and their labels
+C:/git_project/OpenglProj/build/CMakeFiles/dep-spdlog
+C:/git_project/OpenglProj/build/CMakeFiles/be3fb359a20894ae5b233d85e3ea0995/dep-spdlog.rule
+C:/git_project/OpenglProj/build/CMakeFiles/c63799e2fab5a057622866fee70a8cfa/dep-spdlog-complete.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-build.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-configure.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-download.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-install.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-mkdir.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-patch.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-test.rule
+C:/git_project/OpenglProj/build/CMakeFiles/a7414a689d832cf804be74a9c53a6ebb/dep-spdlog-update.rule

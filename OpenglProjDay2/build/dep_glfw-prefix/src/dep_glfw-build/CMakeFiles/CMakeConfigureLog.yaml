@@ -1,0 +1,317 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+      빌드 시작: 2024-11-01 오후 7:42:03
+      
+      1 노드의 "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\3.30.5\\CompilerIdC\\CompilerIdC.vcxproj" 프로젝트(기본 대상)입니다.
+      PrepareForBuild:
+        "Debug\\" 디렉터리를 만들고 있습니다.
+        구조적 출력을 사용할 수 있습니다. 컴파일러 진단의 서식은 오류 계층 구조를 반영합니다. 자세한 내용은 https://aka.ms/cpp/structured-output을 참조하세요.
+        "Debug\\CompilerIdC.tlog\\" 디렉터리를 만들고 있습니다.
+      InitializeBuildStatus:
+        "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\\CompilerIdC.tlog\\unsuccessfulbuild"을(를) 만들고 있습니다.
+        "Debug\\CompilerIdC.tlog\\unsuccessfulbuild"에 연결(touching)하고 있습니다.
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\3.30.5\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" 파일을 삭제하고 있습니다.
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate"에 연결(touching)하고 있습니다.
+      "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\3.30.5\\CompilerIdC\\CompilerIdC.vcxproj" 프로젝트를 빌드했습니다(기본 대상).
+      
+      빌드했습니다.
+          경고 0개
+          오류 0개
+      
+      경과 시간: 00:00:01.13
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/3.30.5/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-ezdje3"
+      binary: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-ezdje3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-ezdje3'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1f590.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+        빌드 시작: 2024-11-01 오후 7:42:05
+        
+        1 노드의 "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-ezdje3\\cmTC_1f590.vcxproj" 프로젝트(기본 대상)입니다.
+        PrepareForBuild:
+          "cmTC_1f590.dir\\Debug\\" 디렉터리를 만들고 있습니다.
+          구조적 출력을 사용할 수 있습니다. 컴파일러 진단의 서식은 오류 계층 구조를 반영합니다. 자세한 내용은 https://aka.ms/cpp/structured-output을 참조하세요.
+          "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-ezdje3\\Debug\\" 디렉터리를 만들고 있습니다.
+          "cmTC_1f590.dir\\Debug\\cmTC_1f590.tlog\\" 디렉터리를 만들고 있습니다.
+        InitializeBuildStatus:
+          "AlwaysCreate"이(가) 지정되었기 때문에 "cmTC_1f590.dir\\Debug\\cmTC_1f590.tlog\\unsuccessfulbuild"을(를) 만들고 있습니다.
+          "cmTC_1f590.dir\\Debug\\cmTC_1f590.tlog\\unsuccessfulbuild"에 연결(touching)하고 있습니다.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1f590.dir\\Debug\\\\" /Fd"cmTC_1f590.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33130(x64)
+          Copyright (c) Microsoft Corporation. All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1f590.dir\\Debug\\\\" /Fd"cmTC_1f590.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-ezdje3\\Debug\\cmTC_1f590.exe" /INCREMENTAL /ILK:"cmTC_1f590.dir\\Debug\\cmTC_1f590.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-ezdje3/Debug/cmTC_1f590.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-ezdje3/Debug/cmTC_1f590.lib" /MACHINE:X64  /machine:x64 cmTC_1f590.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_1f590.vcxproj -> D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-ezdje3\\Debug\\cmTC_1f590.exe
+        FinalizeBuildStatus:
+          "cmTC_1f590.dir\\Debug\\cmTC_1f590.tlog\\unsuccessfulbuild" 파일을 삭제하고 있습니다.
+          "cmTC_1f590.dir\\Debug\\cmTC_1f590.tlog\\cmTC_1f590.lastbuildstate"에 연결(touching)하고 있습니다.
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-ezdje3\\cmTC_1f590.vcxproj" 프로젝트를 빌드했습니다(기본 대상).
+        
+        빌드했습니다.
+            경고 0개
+            오류 0개
+        
+        경과 시간: 00:00:01.12
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.38.33130.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:58 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-gp00aj"
+      binary: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-gp00aj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-gp00aj'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d87f1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+        빌드 시작: 2024-11-01 오후 7:42:07
+        
+        1 노드의 "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\cmTC_d87f1.vcxproj" 프로젝트(기본 대상)입니다.
+        PrepareForBuild:
+          "cmTC_d87f1.dir\\Debug\\" 디렉터리를 만들고 있습니다.
+          구조적 출력을 사용할 수 있습니다. 컴파일러 진단의 서식은 오류 계층 구조를 반영합니다. 자세한 내용은 https://aka.ms/cpp/structured-output을 참조하세요.
+          "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\Debug\\" 디렉터리를 만들고 있습니다.
+          "cmTC_d87f1.dir\\Debug\\cmTC_d87f1.tlog\\" 디렉터리를 만들고 있습니다.
+        InitializeBuildStatus:
+          "AlwaysCreate"이(가) 지정되었기 때문에 "cmTC_d87f1.dir\\Debug\\cmTC_d87f1.tlog\\unsuccessfulbuild"을(를) 만들고 있습니다.
+          "cmTC_d87f1.dir\\Debug\\cmTC_d87f1.tlog\\unsuccessfulbuild"에 연결(touching)하고 있습니다.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d87f1.dir\\Debug\\\\" /Fd"cmTC_d87f1.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\src.c"
+          Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33130(x64)
+          Copyright (c) Microsoft Corporation. All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d87f1.dir\\Debug\\\\" /Fd"cmTC_d87f1.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\src.c"
+          src.c
+        D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\src.c(1,10): error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory [D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\cmTC_d87f1.vcxproj]
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\cmTC_d87f1.vcxproj" 프로젝트를 빌드했습니다(기본 대상). - 실패
+        
+        빌드하지 못했습니다.
+        
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\cmTC_d87f1.vcxproj"(기본 대상)(1)->
+        (ClCompile 대상) -> 
+          D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\src.c(1,10): error C1083: 포함 파일을 열 수 없습니다. 'pthread.h': No such file or directory [D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-gp00aj\\cmTC_d87f1.vcxproj]
+        
+            경고 0개
+            오류 1개
+        
+        경과 시간: 00:00:00.55
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "CMakeLists.txt:58 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-j5j3j9"
+      binary: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-j5j3j9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-j5j3j9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_509bb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+        빌드 시작: 2024-11-01 오후 7:42:08
+        
+        1 노드의 "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\cmTC_509bb.vcxproj" 프로젝트(기본 대상)입니다.
+        PrepareForBuild:
+          "cmTC_509bb.dir\\Debug\\" 디렉터리를 만들고 있습니다.
+          구조적 출력을 사용할 수 있습니다. 컴파일러 진단의 서식은 오류 계층 구조를 반영합니다. 자세한 내용은 https://aka.ms/cpp/structured-output을 참조하세요.
+          "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\Debug\\" 디렉터리를 만들고 있습니다.
+          "cmTC_509bb.dir\\Debug\\cmTC_509bb.tlog\\" 디렉터리를 만들고 있습니다.
+        InitializeBuildStatus:
+          "AlwaysCreate"이(가) 지정되었기 때문에 "cmTC_509bb.dir\\Debug\\cmTC_509bb.tlog\\unsuccessfulbuild"을(를) 만들고 있습니다.
+          "cmTC_509bb.dir\\Debug\\cmTC_509bb.tlog\\unsuccessfulbuild"에 연결(touching)하고 있습니다.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_509bb.dir\\Debug\\\\" /Fd"cmTC_509bb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33130(x64)
+          Copyright (c) Microsoft Corporation. All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_509bb.dir\\Debug\\\\" /Fd"cmTC_509bb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\Debug\\cmTC_509bb.exe" /INCREMENTAL /ILK:"cmTC_509bb.dir\\Debug\\cmTC_509bb.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-j5j3j9/Debug/cmTC_509bb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-j5j3j9/Debug/cmTC_509bb.lib" /MACHINE:X64  /machine:x64 cmTC_509bb.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 'pthreads.lib' 파일을 열 수 없습니다. [D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\cmTC_509bb.vcxproj]
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\cmTC_509bb.vcxproj" 프로젝트를 빌드했습니다(기본 대상). - 실패
+        
+        빌드하지 못했습니다.
+        
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\cmTC_509bb.vcxproj"(기본 대상)(1)->
+        (Link 대상) -> 
+          LINK : fatal error LNK1104: 'pthreads.lib' 파일을 열 수 없습니다. [D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-j5j3j9\\cmTC_509bb.vcxproj]
+        
+            경고 0개
+            오류 1개
+        
+        경과 시간: 00:00:00.67
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "CMakeLists.txt:58 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-bwpr7v"
+      binary: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-bwpr7v"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_MODULE_PATH: "D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-bwpr7v'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e9cfa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        msbuild 버전 17.8.3+195e7f5a3(.NET Framework용)
+        빌드 시작: 2024-11-01 오후 7:42:09
+        
+        1 노드의 "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\cmTC_e9cfa.vcxproj" 프로젝트(기본 대상)입니다.
+        PrepareForBuild:
+          "cmTC_e9cfa.dir\\Debug\\" 디렉터리를 만들고 있습니다.
+          구조적 출력을 사용할 수 있습니다. 컴파일러 진단의 서식은 오류 계층 구조를 반영합니다. 자세한 내용은 https://aka.ms/cpp/structured-output을 참조하세요.
+          "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\Debug\\" 디렉터리를 만들고 있습니다.
+          "cmTC_e9cfa.dir\\Debug\\cmTC_e9cfa.tlog\\" 디렉터리를 만들고 있습니다.
+        InitializeBuildStatus:
+          "AlwaysCreate"이(가) 지정되었기 때문에 "cmTC_e9cfa.dir\\Debug\\cmTC_e9cfa.tlog\\unsuccessfulbuild"을(를) 만들고 있습니다.
+          "cmTC_e9cfa.dir\\Debug\\cmTC_e9cfa.tlog\\unsuccessfulbuild"에 연결(touching)하고 있습니다.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e9cfa.dir\\Debug\\\\" /Fd"cmTC_e9cfa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ 최적화 컴파일러 버전 19.38.33130(x64)
+          Copyright (c) Microsoft Corporation. All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e9cfa.dir\\Debug\\\\" /Fd"cmTC_e9cfa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\Debug\\cmTC_e9cfa.exe" /INCREMENTAL /ILK:"cmTC_e9cfa.dir\\Debug\\cmTC_e9cfa.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-bwpr7v/Debug/cmTC_e9cfa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/git/phoengine/OpenglProjDay2/build/dep_glfw-prefix/src/dep_glfw-build/CMakeFiles/CMakeScratch/TryCompile-bwpr7v/Debug/cmTC_e9cfa.lib" /MACHINE:X64  /machine:x64 cmTC_e9cfa.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 'pthread.lib' 파일을 열 수 없습니다. [D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\cmTC_e9cfa.vcxproj]
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\cmTC_e9cfa.vcxproj" 프로젝트를 빌드했습니다(기본 대상). - 실패
+        
+        빌드하지 못했습니다.
+        
+        "D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\cmTC_e9cfa.vcxproj"(기본 대상)(1)->
+        (Link 대상) -> 
+          LINK : fatal error LNK1104: 'pthread.lib' 파일을 열 수 없습니다. [D:\\git\\phoengine\\OpenglProjDay2\\build\\dep_glfw-prefix\\src\\dep_glfw-build\\CMakeFiles\\CMakeScratch\\TryCompile-bwpr7v\\cmTC_e9cfa.vcxproj]
+        
+            경고 0개
+            오류 1개
+        
+        경과 시간: 00:00:00.67
+        
+      exitCode: 1
+...

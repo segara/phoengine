@@ -1,0 +1,4 @@
+D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/cmake_opengl_example.dir
+D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/dep_glfw.dir
+D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/ALL_BUILD.dir
+D:/git/phoengine/OpenglProjDay2/build/CMakeFiles/ZERO_CHECK.dir
