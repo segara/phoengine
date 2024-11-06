@@ -1,9 +1,0 @@
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/spdlog.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/PACKAGE.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/INSTALL.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/ALL_BUILD.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/CMakeFiles/ZERO_CHECK.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/example.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/PACKAGE.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/INSTALL.dir
-D:/git/phoengine/OpenglProjDay2/build/dep-spdlog-prefix/src/dep-spdlog-build/example/CMakeFiles/ALL_BUILD.dir

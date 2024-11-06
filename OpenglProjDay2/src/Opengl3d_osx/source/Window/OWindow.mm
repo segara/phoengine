@@ -2,44 +2,35 @@
 //Windows
 
 #include "Window/OWindow.h"
-
-#include <cassert>
 #import <Cocoa/Cocoa.h>
+#include <cassert>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-@property (assign) NSWindow *window;
+@interface WindowDelegate : NSObject <NSWindowDelegate>
 @end
 
-
-@implementation AppDelegate
-
-- (void)applicationDidFinishLaunching:(NSNotification *)notification {
-}
-
-- (void)applicationWillTerminate:(NSNotification *)notification {
-
-}
+@implementation WindowDelegate
 - (void)windowWillClose:(NSNotification *)notification {
-    // Handle the window close event
-    [[NSApplication sharedApplication] terminate:nil];
+    NSLog(@"Window is closing!");
+    // This will close the entire application
+       [NSApp terminate:nil];
+   
 }
-
 @end
+
 
 OWindow::OWindow()
 {
-	 // Initialize Cocoa application
-    [NSApplication sharedApplication];
-    AppDelegate *appDelegate = [[AppDelegate alloc] init];
-    [NSApp setDelegate:appDelegate];
 	// Cocoa 창 생성
     NSRect frame = NSMakeRect(0, 0, 1024, 768);
-    appDelegate.window = [[NSWindow alloc] initWithContentRect:frame
+    NSWindow *window = [[NSWindow alloc] initWithContentRect:frame
                                               styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable)
                                                 backing:NSBackingStoreBuffered
                                                   defer:NO];
-    [appDelegate.window setTitle:@"gl3dWindow"];
-    [appDelegate.window makeKeyAndOrderFront:nil];
+    [window setTitle:@"gl3dWindow"];
+    [window makeKeyAndOrderFront:nil];
+    WindowDelegate *delegate = [[WindowDelegate alloc] init];
+    [window setDelegate:delegate];
+   
 }
 
 OWindow::~OWindow()

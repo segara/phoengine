@@ -22,14 +22,24 @@ IF (WIN32)
 target_include_directories(${PROJECT_NAME} PUBLIC "src/Opengl3d_win/include")
 ELSEIF(APPLE)
 target_include_directories(${PROJECT_NAME} PUBLIC "src/Opengl3d_osx/include")
+find_library(FOUNDATION_FRAMEWORK Foundation)
+find_library(CORE_FOUNDATION_FRAMEWORK CoreFoundation)
+find_library(APPKIT_FRAMEWORK AppKit)
+SET(XCODE_FRAMEWORK ${FOUNDATION_FRAMEWORK} ${CORE_FOUNDATION_FRAMEWORK} ${APPKIT_FRAMEWORK})
 ENDIF()
 #dependency 기능 사용
 include(Dependency.cmake)
 
 # 프로젝트에 include / lib 관련 옵션 추가
 target_include_directories(${PROJECT_NAME} PUBLIC ${DEP_INCLUDE_DIR})
-target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})
+
+IF (WIN32)
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS})
+# Dependency들이 먼저 build 될 수 있게 관계 설정
+add_dependencies(${PROJECT_NAME} ${DEP_LIST})
+ELSEIF(APPLE)
+target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS} ${XCODE_FRAMEWORK})
+ENDIF()
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC
     WINDOW_NAME="${WINDOW_NAME}"
@@ -37,5 +47,3 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC
     WINDOW_HEIGHT=${WINDOW_HEIGHT}
     )
 
-# Dependency들이 먼저 build 될 수 있게 관계 설정
-add_dependencies(${PROJECT_NAME} ${DEP_LIST})

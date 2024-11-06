@@ -6,7 +6,7 @@ set(DEP_INSTALL_DIR ${PROJECT_BINARY_DIR}/install)
 set(DEP_INCLUDE_DIR ${DEP_INSTALL_DIR}/include)
 set(DEP_LIB_DIR ${DEP_INSTALL_DIR}/lib)
 
-
+IF (WIN32)
 # glfw
 ExternalProject_Add(
     dep_glfw
@@ -24,3 +24,8 @@ ExternalProject_Add(
     )
 set(DEP_LIST ${DEP_LIST} dep_glfw)
 set(DEP_LIBS ${DEP_LIBS} glfw3)
+ENDIF()
+
+
+
+

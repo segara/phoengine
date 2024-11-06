@@ -9,9 +9,10 @@ public:
 	Game();
 	~Game();
 	void run();
+    void quit();
 private:
 
-	void quit();
+	
 	bool m_isRunning = true;
 	std::unique_ptr<OWindow> m_display;
 };
