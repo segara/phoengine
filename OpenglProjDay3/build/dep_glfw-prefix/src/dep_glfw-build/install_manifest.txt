@@ -1,8 +1,0 @@
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/include/GLFW/glfw3.h
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/include/GLFW/glfw3native.h
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/cmake/glfw3/glfw3Config.cmake
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/cmake/glfw3/glfw3ConfigVersion.cmake
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/cmake/glfw3/glfw3Targets.cmake
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/cmake/glfw3/glfw3Targets-debug.cmake
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/pkgconfig/glfw3.pc
-E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/glfw3.lib
