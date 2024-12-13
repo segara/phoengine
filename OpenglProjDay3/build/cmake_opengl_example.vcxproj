@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A8124DAC-A0F5-3FB3-BE50-E44AB865F41A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.20348.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>cmake_opengl_example</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cmake_opengl_example.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cmake_opengl_example</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cmake_opengl_example.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cmake_opengl_example</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">cmake_opengl_example.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">cmake_opengl_example</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">cmake_opengl_example.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">cmake_opengl_example</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;WINDOW_NAME="Hello, OpenGL!";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WINDOW_NAME=\"Hello, OpenGL!\";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Debug\glad.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib;E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/git/phoengine/phoengine/OpenglProjDay3/build/Debug/cmake_opengl_example.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/git/phoengine/phoengine/OpenglProjDay3/build/Debug/cmake_opengl_example.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOW_NAME="Hello, OpenGL!";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOW_NAME=\"Hello, OpenGL!\";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Release\glad.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib;E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/git/phoengine/phoengine/OpenglProjDay3/build/Release/cmake_opengl_example.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/git/phoengine/phoengine/OpenglProjDay3/build/Release/cmake_opengl_example.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOW_NAME="Hello, OpenGL!";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOW_NAME=\"Hello, OpenGL!\";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\glad.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib;E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/git/phoengine/phoengine/OpenglProjDay3/build/MinSizeRel/cmake_opengl_example.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/git/phoengine/phoengine/OpenglProjDay3/build/MinSizeRel/cmake_opengl_example.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOW_NAME="Hello, OpenGL!";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WINDOW_NAME=\"Hello, OpenGL!\";WINDOW_WIDTH=640;WINDOW_HEIGHT=480;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\git\phoengine\phoengine\OpenglProjDay3\src;E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\gladsources\glad\include;E:\git\phoengine\phoengine\OpenglProjDay3\build\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\glad.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib;E:/git/phoengine/phoengine/OpenglProjDay3/build/install/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/git/phoengine/phoengine/OpenglProjDay3/build/RelWithDebInfo/cmake_opengl_example.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/git/phoengine/phoengine/OpenglProjDay3/build/RelWithDebInfo/cmake_opengl_example.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/git/phoengine/phoengine/OpenglProjDay3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/git/phoengine/phoengine/OpenglProjDay3 -BE:/git/phoengine/phoengine/OpenglProjDay3/build --check-stamp-file E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\Dependency.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\dep_glfw-prefix\tmp\dep_glfw-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/git/phoengine/phoengine/OpenglProjDay3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/git/phoengine/phoengine/OpenglProjDay3 -BE:/git/phoengine/phoengine/OpenglProjDay3/build --check-stamp-file E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\Dependency.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\dep_glfw-prefix\tmp\dep_glfw-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/git/phoengine/phoengine/OpenglProjDay3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/git/phoengine/phoengine/OpenglProjDay3 -BE:/git/phoengine/phoengine/OpenglProjDay3/build --check-stamp-file E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\Dependency.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\dep_glfw-prefix\tmp\dep_glfw-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/git/phoengine/phoengine/OpenglProjDay3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/git/phoengine/phoengine/OpenglProjDay3 -BE:/git/phoengine/phoengine/OpenglProjDay3/build --check-stamp-file E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPython\Support.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\Dependency.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeCXXCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeRCCompiler.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\3.24.0-rc3\CMakeSystem.cmake;E:\git\phoengine\phoengine\OpenglProjDay3\build\dep_glfw-prefix\tmp\dep_glfw-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\git\phoengine\phoengine\OpenglProjDay3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\git\phoengine\phoengine\OpenglProjDay3\src\Game.cpp" />
+    <ClCompile Include="E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\source\Graphic\GraphicEngine.cpp" />
+    <ClCompile Include="E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\source\Graphic\GraphicEngine_win32.cpp" />
+    <ClCompile Include="E:\git\phoengine\phoengine\OpenglProjDay3\src\Opengl3d_win\source\Window\OWindow.cpp" />
+    <ClCompile Include="E:\git\phoengine\phoengine\OpenglProjDay3\src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\ZERO_CHECK.proj">
+      <Project>{933A0259-0676-3A36-90C5-66A6B5F23E5A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\dep_glfw.vcxproj">
+      <Project>{B9FF9C1D-128E-367E-89D3-8C96D1866650}</Project>
+      <Name>dep_glfw</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\glad.vcxproj">
+      <Project>{93455818-E033-3845-8BE9-7B5DDFD7B1A1}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

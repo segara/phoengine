@@ -1,0 +1,1 @@
+cmd='C:/Program Files/CMake/bin/cmake.exe;-DCMAKE_INSTALL_PREFIX=E:/git/phoengine/phoengine/OpenglProjDay3/build/install;-DGLFW_BUILD_EXAMPLES=OFF;-DGLFW_BUILD_TESTS=OFF;-DGLFW_BUILD_DOCS=OFF;-GVisual Studio 16 2019;-DCMAKE_GENERATOR_INSTANCE:INTERNAL=E:/Microsoft/VisualStudio;<SOURCE_DIR><SOURCE_SUBDIR>'

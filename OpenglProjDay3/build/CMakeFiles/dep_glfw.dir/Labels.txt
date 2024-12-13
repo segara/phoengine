@@ -1,0 +1,14 @@
+# Target labels
+ dep_glfw
+# Source files and their labels
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/dep_glfw
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/989f158adb9888d2ba5cfa8f5df4549c/dep_glfw.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/b15524ded05d9d77cd9638176f57f893/dep_glfw-complete.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-build.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-configure.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-download.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-install.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-mkdir.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-patch.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-test.rule
+E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/14272f3a18e2f0b8e9c3a4ab211a3f3b/dep_glfw-update.rule

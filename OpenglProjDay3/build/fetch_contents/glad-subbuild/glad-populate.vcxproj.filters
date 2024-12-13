@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\ffddf1c2259ba716cc73ccd1b92d7569\glad-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\d3e25187dcf822e7e1264b5b1822ba6a\glad-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\54bddcd022852fa39cb334a3b2c6348f\glad-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-subbuild\CMakeFiles\glad-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BFDBD708-D269-396C-872B-6F3179DE849E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1 @@
+--out-path E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad --api gl:core=3.3,wgl=1.0 --extensions WGL_ARB_extensions_string,WGL_ARB_pixel_format,WGL_ARB_create_context,WGL_ARB_create_context_profile,WGL_EXT_extensions_string,WGL_EXT_swap_control c --loader 

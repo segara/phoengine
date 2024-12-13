@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/glad-populate"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/54bddcd022852fa39cb334a3b2c6348f/glad-populate.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/d3e25187dcf822e7e1264b5b1822ba6a/glad-populate-complete.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-build.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-configure.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-download.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-install.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-patch.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-test.rule"
+		},
+		{
+			"file" : "E:/git/phoengine/phoengine/OpenglProjDay3/build/fetch_contents/glad-subbuild/CMakeFiles/ffddf1c2259ba716cc73ccd1b92d7569/glad-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glad-populate"
+		],
+		"name" : "glad-populate"
+	}
+}

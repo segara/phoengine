@@ -10,18 +10,18 @@ set(WINDOW_HEIGHT 480)
 project(${PROJECT_NAME})
 
 IF (WIN32)
-file(GLOB SOURCES "src/Opengl3d_win/source/Window/*.cpp" "src/main.cpp" "src/Game.cpp")
+file(GLOB SOURCES "src/Opengl_win/source/Window/*.cpp" "src/main.cpp" "src/Game.cpp")
 ELSEIF(APPLE)
-file(GLOB SOURCES "src/Opengl3d_osx/source/Window/*.mm" "src/main.mm" "src/Game.mm")
+file(GLOB SOURCES "src/Metal_osx/source/Window/*.mm" "src/main.mm" "src/Game.mm")
 ENDIF()
 
 # add_executable 프로젝트 타겟으로 지정 : visual studio 의 project
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 IF (WIN32)
-target_include_directories(${PROJECT_NAME} PUBLIC "src/Opengl3d_win/include")
+target_include_directories(${PROJECT_NAME} PUBLIC "src/Opengl_win/include")
 ELSEIF(APPLE)
-target_include_directories(${PROJECT_NAME} PUBLIC "src/Opengl3d_osx/include")
+target_include_directories(${PROJECT_NAME} PUBLIC "src/Metal_osx/include")
 find_library(FOUNDATION_FRAMEWORK Foundation)
 find_library(CORE_FOUNDATION_FRAMEWORK CoreFoundation)
 find_library(APPKIT_FRAMEWORK AppKit)

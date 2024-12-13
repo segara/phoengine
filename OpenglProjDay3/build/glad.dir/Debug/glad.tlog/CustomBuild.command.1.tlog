@@ -1,0 +1,36 @@
+^E:\GIT\PHOENGINE\PHOENGINE\OPENGLPROJDAY3\BUILD\CMAKEFILES\36A2EF8EE0FFB1A1885D497DF4549BF8\KHRPLATFORM.H.RULE
+setlocal
+cd E:\git\phoengine\phoengine\OpenglProjDay3\build\fetch_contents\glad-src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+echo Cleaning E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E remove_directory E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad
+if %errorlevel% neq 0 goto :cmEnd
+echo Generating with args --out-path E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad --api gl:core=3.3,wgl=1.0 --extensions WGL_ARB_extensions_string,WGL_ARB_pixel_format,WGL_ARB_create_context,WGL_ARB_create_context_profile,WGL_EXT_extensions_string,WGL_EXT_swap_control c --loader
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\jw\AppData\Local\Programs\Python\Python310\python.exe -m glad --out-path E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad --api gl:core=3.3,wgl=1.0 --extensions WGL_ARB_extensions_string,WGL_ARB_pixel_format,WGL_ARB_create_context,WGL_ARB_create_context_profile,WGL_EXT_extensions_string,WGL_EXT_swap_control c --loader
+if %errorlevel% neq 0 goto :cmEnd
+echo Writing E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad/args.txt
+if %errorlevel% neq 0 goto :cmEnd
+echo --out-path E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad --api gl:core=3.3,wgl=1.0 --extensions WGL_ARB_extensions_string,WGL_ARB_pixel_format,WGL_ARB_create_context,WGL_ARB_create_context_profile,WGL_EXT_extensions_string,WGL_EXT_swap_control c --loader > E:/git/phoengine/phoengine/OpenglProjDay3/build/gladsources/glad/args.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\GIT\PHOENGINE\PHOENGINE\OPENGLPROJDAY3\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/git/phoengine/phoengine/OpenglProjDay3 -BE:/git/phoengine/phoengine/OpenglProjDay3/build --check-stamp-file E:/git/phoengine/phoengine/OpenglProjDay3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

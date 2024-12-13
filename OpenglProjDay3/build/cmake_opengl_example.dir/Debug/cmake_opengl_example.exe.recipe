@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\git\phoengine\phoengine\OpenglProjDay3\build\x64\Debug\dep_glfw</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\git\phoengine\phoengine\OpenglProjDay3\build\Debug\cmake_opengl_example.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs>
+    <NonRecipeFileRef>
+      <FullPath>E:\git\phoengine\phoengine\OpenglProjDay3\build\ZERO_CHECK.proj</FullPath>
+    </NonRecipeFileRef>
+  </NonRecipeFileRefs>
+</Project>
