@@ -26,7 +26,8 @@ OWindow::OWindow()
                                               styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable)
                                                 backing:NSBackingStoreBuffered
                                                   defer:NO];
-    [window setTitle:@"gl3dWindow"];
+    m_handle = window.contentView; // NSView 가져오기
+    [window setTitle:@"metal Window"];
     [window makeKeyAndOrderFront:nil];
     WindowDelegate *delegate = [[WindowDelegate alloc] init];
     [window setDelegate:delegate];
@@ -36,4 +37,8 @@ OWindow::OWindow()
 OWindow::~OWindow()
 {
 	
+}
+void OWindow::Present(bool vsync)
+{
+
 }

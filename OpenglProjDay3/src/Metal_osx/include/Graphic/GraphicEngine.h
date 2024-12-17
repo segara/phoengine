@@ -1,5 +1,15 @@
 #pragma once
-#include <Vec4.h>
+
+#define NS_PRIVATE_IMPLEMENTATION
+#define MTL_PRIVATE_IMPLEMENTATION
+#define MTK_PRIVATE_IMPLEMENTATION
+#define CA_PRIVATE_IMPLEMENTATION
+
+#include <Metal/Metal.h>
+#include <AppKit/AppKit.h>
+#include <MetalKit/MetalKit.h>
+#include <QuartzCore/CAMetalLayer.h>
+#include <simd/simd.h>
 class GraphicEngine
 {
 public:
@@ -8,6 +18,10 @@ public:
 
 
 public:
-	void clear(const Vec4& color);
+	void clear(const simd::float4& color);
+    id<MTLDevice> device = nil;
+    id<MTLCommandQueue> commandQueue = nil;
+    CAMetalLayer* metalLayer = nil;
+  
 };
 

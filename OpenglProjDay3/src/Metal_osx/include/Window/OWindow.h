@@ -5,8 +5,8 @@ class OWindow
 public:
 	OWindow();
 	~OWindow();
+    void Present(bool vsync);
 
-private:
 	void* m_handle = nullptr;
 };
 

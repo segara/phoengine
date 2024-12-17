@@ -5,7 +5,7 @@
 #include <chrono>
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
-
+#include <simd/simd.h>
 
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
@@ -36,15 +36,32 @@ Game::Game()
     appDelegate.game = this;
     [NSApp setDelegate:appDelegate];//  set the delegate
 	m_display = std::make_unique<OWindow>();
-    [NSApp run];
+    m_graphicsEngine = std::make_unique<GraphicEngine>(m_display->m_handle);
+    
    
 }
 Game::~Game()
 {
 
 }
+void Game::onCreate()
+{
+}
+
+void Game::onUpdate()
+{
+    simd::float4 clearColor = {1.0f, 0.0f, 0.0f, 1.0f}; // R=1.0, G=0.0, B=0.0, A=1.0
+
+    m_graphicsEngine->clear(clearColor);
+    m_display->Present(false);
+}
+
+void Game::onQuit()
+{
+}
 void Game:: run()
 {
+    onCreate();
     while(m_isRunning)
     {
         NSEvent *event;
@@ -60,8 +77,10 @@ void Game:: run()
         }
         
         // Sleep to reduce CPU usage
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        onUpdate();
     }
+    onQuit();
 }
 
 void Game::quit()
