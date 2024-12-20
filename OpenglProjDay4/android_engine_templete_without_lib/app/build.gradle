@@ -1,0 +1,62 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+// Caution: If you add any Java or Kotlin code to this project, or if you add
+// any dependencies which themselves use Java/Kotlin, you'll need to remove
+// `android:hasCode` from main/AndroidManifest.xml.
+
+android {
+    namespace 'com.example.native_activity'
+    compileSdkVersion 34  // 사용하고자 하는 SDK 버전 (예: 34)
+
+    defaultConfig {
+        applicationId = 'com.example.native_activity'
+        // This is the minimum required for using Choreographer directly from the NDK. If you need
+        // to use a lower minSdkVersion, you must use the Java Choreographer API via JNI.
+        minSdkVersion 28
+        targetSdkVersion 34    // 타겟 SDK 버전
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_STL=c++_static'
+            }
+        }
+        ndk {
+            abiFilters 'arm64-v8a','x86', 'x86_64'
+        }
+    }
+
+    externalNativeBuild {
+
+        cmake {
+            // CMake 버전 지정
+            version "3.22.1"
+            path 'src/main/cpp/CMakeLists.txt'
+        }
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+
+
