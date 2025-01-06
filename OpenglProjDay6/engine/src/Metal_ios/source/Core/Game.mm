@@ -26,7 +26,7 @@ void Game::onCreate()
 
 void Game::onUpdate()
 {
-    simd::float4 clearColor = {1.0f, 0.0f, 0.0f, 1.0f}; // R=1.0, G=0.0, B=0.0, A=1.0
+    simd::float4 clearColor = {0.0f, 0.5f, 1.0f, 1.0f}; 
 
     m_graphicsEngine->clear(clearColor);
     m_display->Present(false);

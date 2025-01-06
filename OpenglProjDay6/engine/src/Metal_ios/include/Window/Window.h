@@ -1,6 +1,7 @@
 #pragma once
 #import <UIKit/UIKit.h>
 
+
 class OWindow
 {
 public:
@@ -9,5 +10,6 @@ public:
     void Present(bool vsync);
     UIWindow *window;
 	void* m_handle;
+
 };
 

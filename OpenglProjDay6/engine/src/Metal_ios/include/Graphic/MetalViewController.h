@@ -7,16 +7,17 @@
 @interface MetalViewController : UIViewController
 @property(nonatomic, strong) MetalView *metalView;
 @property(nonatomic, strong) UIWindow *window;
+- (void)renderLoop:(simd_float4)color;
 @end
 @implementation MetalViewController {
 }
 
 - (void)viewDidLoad {
-
+    
     // MetalView 생성 및 추가
     _metalView = [[MetalView alloc]init];
     self.view = _metalView;
-
+    
     if (self.view.hidden) {
         NSLog(@"View is hidden");
         self.view.hidden = NO;
@@ -26,16 +27,15 @@
         self.view.alpha = 1.0;
     }
     // 타이머로 렌더링 호출
-   
-    [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
-                                     target:self
-                                   selector:@selector(renderLoop)
-                                   userInfo:nil
-                                    repeats:YES];
+    
+    //    [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
+    //                                     target:self
+    //                                   selector:@selector(renderLoop)
+    //                                   userInfo:nil
+    //                                    repeats:YES];
 }
-
-- (void)renderLoop {
-    [_metalView render];
+- (void)renderLoop:(simd_float4)color {
+    [_metalView render:color];
 }
 @end
 

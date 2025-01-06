@@ -1,6 +1,4 @@
 #include "Window.h"
-#include "MetalView.h"
-#include "MetalViewController.h"
 
 #include <cassert>
 
@@ -12,18 +10,7 @@ OWindow::OWindow() {
             window = [[UIWindow alloc] initWithFrame:rect];
             window.hidden = NO;
  
- 
-            auto *view_controller = [[MetalViewController alloc]init];
-            window.rootViewController = view_controller;
-           
-            view_controller.window = window;
-            
-            if (!view_controller.metalView) {
-                NSLog(@"View is not initialized!");
-            }
-            [window addSubview:view_controller.metalView];
-            view_controller.metalView.hidden = NO;
-             m_handle = (__bridge void*)window;
+            m_handle = (__bridge void*)window;
           
 
     //퍼스트 리스폰더는 사용자 입력 이벤트(터치, 키보드 입력 등)를 가장 먼저 처리하는 객체입니다.
@@ -45,5 +32,5 @@ OWindow::~OWindow() {
 }
 
 void OWindow::Present(bool vsync) {
-    //todo : metal view 의 render()코드가 이쪽으로
+   
 }

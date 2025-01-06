@@ -6,6 +6,7 @@
 @property(nonatomic, strong) id<MTLDevice> device;
 @property(nonatomic, strong) id<MTLCommandQueue> commandQueue;
 @property(nonatomic, strong) CAMetalLayer *metalLayer;
+- (void)render:(simd_float4)color;
 @end
 
 @implementation MetalView {
@@ -42,7 +43,7 @@
 
 
 
-- (void)render {
+- (void)render:(simd_float4)color {
     // 다음 drawable 가져오기
     id<CAMetalDrawable> drawable = [_metalLayer nextDrawable];
     if (!drawable) return;
@@ -51,7 +52,7 @@
     MTLRenderPassDescriptor *renderPassDescriptor = [MTLRenderPassDescriptor renderPassDescriptor];
     renderPassDescriptor.colorAttachments[0].texture = drawable.texture;
     renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
-    renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.5, 1.0, 1.0);
+    renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(color.x, color.y, color.z, color.w);
     renderPassDescriptor.colorAttachments[0].storeAction = MTLStoreActionStore;
     
     // Command Buffer 및 Render Command Encoder 생성
