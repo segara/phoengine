@@ -1,72 +1,110 @@
-#include "Graphic/GraphicEngine.h"
+ï»¿#include "Graphic/GraphicEngine.h"
 #include <windows.h>
-#include "glad/gl.h"
-#include "glad/wgl.h"
 #include <assert.h>
 #include <stdexcept>
+// Include necessary DirectX headers
+#include <d3d11.h>
+#include <dxgi.h>
+
+// Global variables for DirectX device and context
+//ID3D11Device
+//Direct3D ë¦¬ì†ŒìŠ¤(ë²„í¼, í…ìŠ¤ì²˜, ì…°ì´ë” ë“±)ë¥¼ ìƒì„±í•˜ê³  ê´€ë¦¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+//ì£¼ìš” ì—­í•  :
+//ë Œë”ë§ì— í•„ìš”í•œ ê·¸ëž˜í”½ ë¦¬ì†ŒìŠ¤ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
+//GPUì— ìž‘ì—…ì„ ì§€ì‹œí•˜ëŠ” ëª…ë ¹ì„ ì¤€ë¹„í•©ë‹ˆë‹¤.
+//Direct3D 11 ê¸°ëŠ¥ ìˆ˜ì¤€ì„ ì„¤ì •í•©ë‹ˆë‹¤.
+ID3D11Device* g_pd3dDevice = NULL;
+//ë Œë”ë§ ëª…ë ¹(ê·¸ë¦¬ê¸° ëª…ë ¹, ìƒíƒœ ì„¤ì • ë“±)ì„ GPUì— ì „ë‹¬í•©ë‹ˆë‹¤.
+//ë¦¬ì†ŒìŠ¤ ë°”ì¸ë”© ë° ì…°ì´ë” ì„¤ì •ì„ ê´€ë¦¬í•©ë‹ˆë‹¤.
+//ë·°í¬íŠ¸ ì„¤ì • ë° ë Œë” íƒ€ê²Ÿì„ ê´€ë¦¬í•©ë‹ˆë‹¤.
+ID3D11DeviceContext* g_pImmediateContext = NULL;
+IDXGISwapChain* g_pSwapChain = NULL;
+//ë Œë” íƒ€ê²Ÿ ë·°ë¡œ, GPUê°€ ê·¸ë¦¬ê¸° ìž‘ì—…ì„ ìˆ˜í–‰í•  ëŒ€ìƒ(ë Œë” íƒ€ê²Ÿ)ì„ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤.
+//ì¼ë°˜ì ìœ¼ë¡œ ìŠ¤ì™‘ ì²´ì¸ì˜ ë°± ë²„í¼ë¥¼ ê°€ë¦¬í‚¤ë©°, ê·¸ë¦¬ê¸° ëª…ë ¹ì€ ì´ ë Œë” íƒ€ê²Ÿ ë·°ì— ê¸°ë¡ë©ë‹ˆë‹¤
+ID3D11RenderTargetView* g_pRenderTargetView = NULL;
+
 GraphicEngine::GraphicEngine(void* hwnd)
 {
-
     HDC dummyDC = GetDC((HWND)hwnd);
 
-    PIXELFORMATDESCRIPTOR pfd = { };
-    pfd.nSize = sizeof(pfd);
-    pfd.nSize = sizeof(PIXELFORMATDESCRIPTOR);  // Set the size of the PFD to the size of the class
-    pfd.dwFlags = PFD_DOUBLEBUFFER | PFD_SUPPORT_OPENGL | PFD_DRAW_TO_WINDOW;   // Enable double buffering, opengl support and drawing to a window
-    pfd.iPixelType = PFD_TYPE_RGBA; // Set our application to use RGBA pixels
-    pfd.cColorBits = 32;        // Give us 32 bits of color information (the higher, the more colors)
-    pfd.cDepthBits = 32;        // Give us 32 bits of depth information (the higher, the more depth levels)
-    pfd.iLayerType = PFD_MAIN_PLANE;    // Set the layer of the PFD
-    int format = ChoosePixelFormat(dummyDC, &pfd);
-    if (format == 0 || SetPixelFormat(dummyDC, format, &pfd) == FALSE) {
-        fprintf(stderr, "Failed to SetPixelFormat GLAD\n");
-    }
+    HRESULT hr = S_OK;
 
-  
-    // OpenGL ÄÁÅØ½ºÆ® »ý¼º ¹× È°¼ºÈ­
-    //HGLRC´Â ±âº»ÀûÀ¸·Î WindowsÀÇ ÇÚµé Å¸ÀÔÀ¸·Î Á¤ÀÇµÈ ±¸Á¶Ã¼ Æ÷ÀÎÅÍÀÔ´Ï´Ù.
-    //HGLRC´Â WindowsÀÇ µð¹ÙÀÌ½º ÄÁÅØ½ºÆ®(HDC)¿Í ¿¬°áµË´Ï´Ù.
-    //wglMakeCurrent¸¦ ÅëÇØ Æ¯Á¤ HGLRC¸¦ È°¼ºÈ­ÇÏ°í OpenGL È£ÃâÀÌ ÇØ´ç ÄÁÅØ½ºÆ®¿¡ Àû¿ëµÇµµ·Ï ¼³Á¤ÇÕ´Ï´Ù.
-    
-    HGLRC temp_context = NULL;
-    temp_context = wglCreateContext(dummyDC);
+    // Swap chain description
+    DXGI_SWAP_CHAIN_DESC sd;
+    ZeroMemory(&sd, sizeof(sd));
+    sd.BufferCount = 1;
+    sd.BufferDesc.Width = 1024;
+    sd.BufferDesc.Height = 768;
+    sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+    sd.BufferDesc.RefreshRate.Numerator = 60;
+    sd.BufferDesc.RefreshRate.Denominator = 1;
+    sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+    sd.OutputWindow = (HWND)hwnd;
+    sd.SampleDesc.Count = 1;
+    sd.SampleDesc.Quality = 0;
+    sd.Windowed = TRUE;
 
-    if (NULL == (temp_context))
+    // Create device, device context, and swap chain
+    hr = D3D11CreateDeviceAndSwapChain(
+        NULL,                     // Adapter
+        D3D_DRIVER_TYPE_HARDWARE, // Driver Type
+        NULL,                     // Software
+        0,                        // Flags
+        NULL,                     // Feature Levels
+        0,                        // Feature Levels count
+        D3D11_SDK_VERSION,        // SDK Version
+        &sd,                      // Swap Chain Desc
+        &g_pSwapChain,            // Swap Chain
+        &g_pd3dDevice,            // Device
+        NULL,                     // Feature Level
+        &g_pImmediateContext      // Device Context
+    );
+
+    if (FAILED(hr))
     {
-        fprintf(stderr, "Failed to initialize wglCreateContext\n");
+        fprintf(stderr, "Failed to create D3D11 device and swap chain\n");
     }
-    bool res = wglMakeCurrent(dummyDC, temp_context);
-    assert(res);
 
-    // wglGetProcAddress
-    // Windows ÇÃ·§Æû¿¡¼­ OpenGL È®Àå ÇÔ¼öÀÇ ÁÖ¼Ò¸¦ °¡Á®¿À´Â µ¥ »ç¿ëµÇ´Â ÇÔ¼öÀÔ´Ï´Ù. 
-    //ÀÌ´Â OpenGL ¶óÀÌºê·¯¸®¿¡ Æ÷ÇÔµÇÁö ¾ÊÀº È®Àå ÇÔ¼ö³ª ±âº» ÇÔ¼öÀÇ Æ÷ÀÎÅÍ¸¦ °¡Á®¿À´Â µ¥ ÇÊ¼öÀûÀÔ´Ï´Ù.
-    //wglGetProcAddress("glActiveTexture"); ÀÌ·±½ÄÀ¸·Î »ç¿ë
-   
-    if (!gladLoadWGL(dummyDC, (GLADloadfunc)wglGetProcAddress)) {
-        fprintf(stderr, "Failed to initialize GLAD\n");
+    // Create render target view
+    ID3D11Texture2D* pBackBuffer = NULL;
+    hr = g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+    if (FAILED(hr))
+    {
+        fprintf(stderr, "Failed to get back buffer\n");
     }
- 
-    // Glad Loader!
-    if (!gladLoaderLoadGL()) {
-        wglMakeCurrent(NULL, NULL);
-        wglDeleteContext(temp_context);
-        ReleaseDC((HWND)hwnd, dummyDC);
-        DestroyWindow((HWND)hwnd);
+
+    hr = g_pd3dDevice->CreateRenderTargetView(pBackBuffer, NULL, &g_pRenderTargetView);
+    pBackBuffer->Release();
+
+    if (FAILED(hr))
+    {
+        fprintf(stderr, "Failed to create render target view\n");
     }
+
+    g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView, NULL);
+
+    // Set viewport
+    D3D11_VIEWPORT vp;
+    vp.Width = (FLOAT)1024;
+    vp.Height = (FLOAT)768;
+    vp.MinDepth = 0.0f;
+    vp.MaxDepth = 1.0f;
+    vp.TopLeftX = 0;
+    vp.TopLeftY = 0;
+    g_pImmediateContext->RSSetViewports(1, &vp);
 }
 GraphicEngine::~GraphicEngine()
 {
     // Clean-up:
-    //if (opengl_context)
-    //    wglDeleteContext(opengl_context);
-    //if (hdc)
-    //    ReleaseDC(hWnd, hdc);
-    //if (hWnd)
-    //    DestroyWindow(hWnd);
+    if (g_pImmediateContext) g_pImmediateContext->ClearState();
+    if (g_pRenderTargetView) g_pRenderTargetView->Release();
+    if (g_pSwapChain) g_pSwapChain->Release();
+    if (g_pImmediateContext) g_pImmediateContext->Release();
+    if (g_pd3dDevice) g_pd3dDevice->Release();
 }
 void GraphicEngine::clear(const Vec4& color)
 {
-    glClearColor(color.x, color.y, color.z, color.w);
-    glClear(GL_COLOR_BUFFER_BIT);
+    float clearColor[] = {color.x, color.y, color.z, color.w};
+    g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView, clearColor);
+    g_pSwapChain->Present(0, 0);
 }

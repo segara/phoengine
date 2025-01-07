@@ -2,8 +2,6 @@
 //Windows
 
 #include "Window/Window.h"
-#include "glad/gl.h"
-#include "glad/wgl.h"
 #include <Windows.h>
 #include <iostream>
 #include <cassert>
@@ -19,6 +17,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		}
 		case WM_CLOSE:
 		{
+			//Game::run() 루프에서 여기서 보낸 메세지 체크
 			PostQuitMessage(0);
 			break;
 		}
@@ -30,7 +29,7 @@ OWindow::OWindow()
 {
 	WNDCLASSEX wc = {};
 	wc.cbSize = sizeof(WNDCLASSEX);
-	wc.lpszClassName = "gl3dWindow";
+	wc.lpszClassName = "direct3dWindow";
 	wc.lpfnWndProc = &WndProc;
 	
 	auto classId = RegisterClassEx(&wc);
@@ -53,13 +52,8 @@ OWindow::OWindow()
 
 OWindow::~OWindow()
 {
-	//DestroyWindow((HWND)m_handle);
 }
 
 void OWindow::Present(bool vsync)
 {
-	HDC dummyDC = GetDC((HWND)m_handle);
-	//wglSwapIntervalEXT(vsync);
-	wglSwapLayerBuffers(GetDC(HWND(m_handle)), WGL_SWAP_MAIN_PLANE);
-
 }

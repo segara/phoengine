@@ -46,7 +46,7 @@ void Game:: run()
 			DispatchMessage(&msg);//함수는 메시지 큐에서 꺼낸 메시지를 전달받아, 해당 메시지를 처리해야 할 윈도우 프로시저로 메시지를 보냅니다.
 
 		}
-		//Sleep(1);
+		Sleep(1);
 		onUpdate();
 	}
 	onQuit();

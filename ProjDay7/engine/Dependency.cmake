@@ -86,6 +86,9 @@ if(API_OPTION STREQUAL "OpenGL")
     # set(DEP_LIST ${DEP_LIST} dep_glfw)
     # set(DEP_LIBS ${DEP_LIBS} glfw3)
 
+elseif(API_OPTION STREQUAL "DirectX11")
+# Link DirectX libraries
+set(DEP_LIBS ${DEP_LIBS} d3d11 dxgi dxguid)
 endif()
 ENDIF()
 
