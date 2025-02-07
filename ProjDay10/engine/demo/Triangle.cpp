@@ -27,7 +27,7 @@ TriangleDemo::~TriangleDemo()
 
 void TriangleDemo::onCreate()
 {
-	vertex list[] =
+	vertex list[] = 
 	{
 		//X - Y - Z
 		{Vec3{-0.5f,-0.5f,0.0f}}, // POS1
@@ -35,7 +35,7 @@ void TriangleDemo::onCreate()
 		{Vec3{ 0.5f,-0.5f,0.0f}}
 	};
 
-	uint32_t size_list = ARRAYSIZE(list);
+    uint32_t size_list = ARRAYSIZE(list);
 
 	// C++17 std::filesystem 사용
 	//std::cout << "Current directory (std::filesystem): " << std::filesystem::current_path() << std::endl;
@@ -43,7 +43,7 @@ void TriangleDemo::onCreate()
 	shader = std::make_shared<ShaderProgram>(m_engine->m_deviceContext);
 
 	shader->load("../demo/shader.fx");
-
+	
 	m_engine->m_deviceContext->createVertexBuffer(list, sizeof(vertex), size_list, shader->getShaderBuffer(), shader->getShaderSize());
 }
 

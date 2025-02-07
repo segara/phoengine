@@ -15,7 +15,7 @@
 #
 
 cmake_minimum_required(VERSION 3.22.1)
-
+set(CMAKE_VERBOSE_MAKEFILE ON)
 if(ANDROID)
 
 # build native_app_glue as a static lib
@@ -32,8 +32,14 @@ set(CMAKE_SHARED_LINKER_FLAGS
     "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
 
 #!!!!!!!!!!!!ENGINE DIR SETTING!!!!!!!!!!!!!!!!!!!!!!
-set(ENGINE_DIR "D:/git/phoengine/OpenglProjDay5/engine")
+#현재 프로젝트 경로를 얻어와서 수정해야 한다. 왜냐하면 현재 cmakelists의 자식경로가 아니기 때문이다.
+set(ENGINE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+message(STATUS "Original Path: ${ENGINE_DIR}")
+#android_engine_templete폴더위치가 변경되지 않는다는 가정하에 android_engine_templete/app/src/main/cpp 문자열 지움
+string(REPLACE "/android_engine_templete/app/src/main/cpp" "" ENGINE_DIR "${ENGINE_DIR}/engine")
+message(STATUS "Modified Path: ${ENGINE_DIR}")
 
+#!!!!!!!!!!!!여기에서 android쪽 cmakelists 로드!!!!!!!!!!!!!!!!!!!!!!
 include(${ENGINE_DIR}/src/gles_android/CMakeLists.txt)
 
 add_library(native-activity SHARED main.cpp)

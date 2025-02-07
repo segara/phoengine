@@ -10,9 +10,9 @@ public:
 	TriangleDemo(const std::shared_ptr<GraphicEngine>& engine);
 	~TriangleDemo();
 
-	void onCreate();
-	void onUpdate();
-	void onDestroy();
+	 void onCreate();
+	 void onUpdate();
+	 void onDestroy();
 private:
 	std::shared_ptr <GraphicEngine> m_engine;
 	std::shared_ptr<ShaderProgram> shader;
