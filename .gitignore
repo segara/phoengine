@@ -178,7 +178,7 @@ StyleCopReport.xml
 *.meta
 *.obj
 *.iobj
-*.pch
+# *.pch
 *.pdb
 *.ipdb
 *.pgc
