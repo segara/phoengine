@@ -106,13 +106,17 @@ set(DEP_LIBS ${DEP_LIBS} d3d11 dxgi dxguid d3dcompiler)
 endif()
 ENDIF()
 
-IF (APPLE)
-# include(FetchContent)
 
-# ##########brew install cmake First###########
-# FetchContent_Declare(
-#         ios_cmake
-#         GIT_REPOSITORY	https://github.com/sheldonth/ios-cmake.git
-# )
-# FetchContent_MakeAvailable(ios_cmake)
+IF (APPLE)
+include(FetchContent)
+FetchContent_Declare(
+        hlslcc
+        GIT_REPOSITORY https://github.com/Unity-Technologies/HLSLcc
+    )
+    target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR}/fetch_contents/hlslcc-src/include)
+
+# HLSLcc 다운로드 및 준비
+FetchContent_MakeAvailable(hlslcc)
+    set(DEP_LIST ${DEP_LIST} hlslcc)
+    set(DEP_LIBS ${DEP_LIBS} hlslcc) 
 ENDIF()
