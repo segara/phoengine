@@ -1,4 +1,4 @@
-# TestLibrary/CMakeLists.txt
+﻿# TestLibrary/CMakeLists.txt
 cmake_minimum_required(VERSION 3.14)
 # C++ 표준 설정
 set(CMAKE_CXX_STANDARD 17)
@@ -8,8 +8,10 @@ project(TriangleTest)
 
 # 라이브러리 소스 파일
 file(GLOB_RECURSE SOURCE_FILES Triangle.cpp)
+if(APPLE OR CMAKE_SYSTEM_NAME STREQUAL "iOS")
 set_source_files_properties(${SOURCE_FILES} PROPERTIES
         COMPILE_FLAGS "-x objective-c++")
+endif()
 add_library(TriangleTest STATIC Triangle.cpp)
 
 # 헤더 파일 디렉토리 포함

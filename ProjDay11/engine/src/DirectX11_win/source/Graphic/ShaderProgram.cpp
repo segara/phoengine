@@ -62,4 +62,5 @@ size_t ShaderProgram::getShaderSize()
 
 bool ShaderProgram::release()
 {
+	return true;
 }
