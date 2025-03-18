@@ -33,8 +33,9 @@ void TriangleDemo::onCreate()
 	vertex list[] = 
 	{
         {Vec3{-0.5f,-0.5f,0.0f}}, // POS1
-        {Vec3{0.5f,-0.5f,0.0f}}, // POS2
-        {Vec3{0.0f,0.5f,0.0f}}
+        {Vec3{0.0f,0.5f,0.0f}},
+        {Vec3{0.5f,-0.5f,0.0f}} // POS2
+  
 	};
   
     uint32_t size_list = ARRAYSIZE(list);
