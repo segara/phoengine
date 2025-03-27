@@ -1,5 +1,7 @@
-﻿# ExternalProject 관련 명령어 셋 추가
+# ExternalProject 관련 명령어 셋 추가
 include(ExternalProject)
+
+
 #glad 설치시 python 필요
 find_package(Python COMPONENTS Interpreter REQUIRED)
 
@@ -108,15 +110,69 @@ ENDIF()
 
 
 IF (APPLE)
-include(FetchContent)
-FetchContent_Declare(
-        hlslcc
-        GIT_REPOSITORY https://github.com/Unity-Technologies/HLSLcc
-    )
-    target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR}/fetch_contents/hlslcc-src/include)
 
-# HLSLcc 다운로드 및 준비
-FetchContent_MakeAvailable(hlslcc)
-    set(DEP_LIST ${DEP_LIST} hlslcc)
-    set(DEP_LIBS ${DEP_LIBS} hlslcc) 
+
+    include(FetchContent)
+
+    FetchContent_Declare(
+        dxc
+        GIT_REPOSITORY https://github.com/google/DirectXShaderCompiler
+        GIT_TAG linux
+        GIT_SUBMODULES_RECURSE ON
+        GIT_PROGRESS TRUE
+    )
+
+
+# Get the properties, but don't make it available yet
+FetchContent_GetProperties(dxc)
+if(NOT dxc_POPULATED)
+    # Populate the content but don't build it yet
+    FetchContent_Populate(dxc)
+    
+   # brew install cmake 미리 돌려줄것
+   # Create a shell script to build DXC
+    file(WRITE ${CMAKE_BINARY_DIR}/build_dxc.sh
+    "#!/bin/sh
+    export PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
+    cd ${dxc_BINARY_DIR}
+    cmake ${dxc_SOURCE_DIR} -GNinja -DCMAKE_BUILD_TYPE=Release $(cat ${dxc_SOURCE_DIR}/utils/cmake-predefined-config-params)
+    cmake --build .
+    ")
+    file(CHMOD ${CMAKE_BINARY_DIR}/build_dxc.sh PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE)
+
+    # Add a custom target to execute the shell script
+    add_custom_target(build_dxc
+        COMMAND ${CMAKE_BINARY_DIR}/build_dxc.sh
+        COMMENT "Building DXC"
+    )
+endif()
+
+    target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR}/fetch_contents/dxc-src/include)
+    
+    set(DXC_ROOT_DIR "${CMAKE_BINARY_DIR}/fetch_contents/dxc-src")
+    set(DXC_INCLUDE_DIR "${DXC_ROOT_DIR}/include")
+    set(DXC_LIB_DIR "${CMAKE_BINARY_DIR}/fetch_contents/dxc-build/lib")
+
+    FetchContent_MakeAvailable(dxc)
+    add_dependencies(${PROJECT_NAME} build_dxc)
+
+    target_link_libraries(${PROJECT_NAME} PUBLIC  ${DXC_LIB_DIR}/libdxcompiler.3.7.dylib)
+
+
+    # Fetch SPIRV-Cross
+    FetchContent_Declare(
+        spirv-cross
+        GIT_REPOSITORY https://github.com/KhronosGroup/SPIRV-Cross.git
+        GIT_TAG main  # Or a specific tag/commit for stability
+    )
+    FetchContent_MakeAvailable(spirv-cross)
+    target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR}/fetch_contents/spirv-cross-src/include)
+
+    # Link your target with SPIRV-Cross libraries
+    target_link_libraries(${PROJECT_NAME} PUBLIC
+        spirv-cross-core
+        spirv-cross-msl
+        spirv-cross-glsl
+    )
+
 ENDIF()
