@@ -1,4 +1,4 @@
-﻿#include "Vec3.h"
+#include "Vec3.h"
 
 #include "Triangle.h"
 
@@ -16,7 +16,7 @@
 struct vertex
 {
 	Vec3 position;
-    float padding;   //padding for metal!
+    float padding = 1;   //padding for metal!
 };
 
 TriangleDemo::TriangleDemo(const std::shared_ptr<GraphicEngine>& engine)

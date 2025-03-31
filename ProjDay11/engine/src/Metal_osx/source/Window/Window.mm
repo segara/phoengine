@@ -21,7 +21,7 @@
 OWindow::OWindow()
 {
 	// Cocoa 창 생성
-    NSRect frame = NSMakeRect(0, 0, 400, 400);
+    NSRect frame = NSMakeRect(0, 0, 800, 600);
     NSWindow *window = [[NSWindow alloc] initWithContentRect:frame
                                               styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable)
                                                 backing:NSBackingStoreBuffered

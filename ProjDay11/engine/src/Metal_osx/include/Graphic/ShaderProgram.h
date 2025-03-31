@@ -25,7 +25,7 @@ public:
 
     // Loads and compiles a specific shader function from the library.
     // Here shaderType could be defined as: 0 for vertex, 1 for fragment.
-    size_t compileShader(const char* path, size_t shaderType);
+    size_t compileShader(std::string shaderBuffer, size_t shaderType);
 
     // Returns an identifier for the pipeline state (as a size_t).
     size_t getProgramID() const;
