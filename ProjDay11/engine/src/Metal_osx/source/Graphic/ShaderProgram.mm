@@ -37,6 +37,16 @@ LPCWSTR ConvertCharToWChar(const char* str) {
     return wstr;
 }
 
+void SaveMetalShaderToFile(const std::string& msl_source_vs, const std::string& path) {
+    std::ofstream outFile(path);
+    if (!outFile) {
+        throw std::runtime_error("파일을 열 수 없습니다.");
+    }
+
+    outFile << msl_source_vs;
+    outFile.close();
+}
+
 // Load a shader file from disk, read its contents, and compile it into a Metal library.
 bool ShaderProgram::load(const char* shaderfile) {
     // Initialize DXC compiler
@@ -161,6 +171,9 @@ bool ShaderProgram::load(const char* shaderfile) {
     std::string msl_source_vs = compiler_spirv_cross_vs.compile();
     std::string msl_source_ps = compiler_spirv_cross_ps.compile();
 
+    SaveMetalShaderToFile(msl_source_vs, "../../demo/shader_vs.metal");
+    SaveMetalShaderToFile(msl_source_ps, "../../demo/shader_ps.metal");
+    
     compileShader(msl_source_vs,0);
     compileShader(msl_source_ps,1);
         

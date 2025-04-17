@@ -6,6 +6,7 @@
 #include "Graphic/GraphicEngine.h"
 #include "memory.h"
 #include "DisplayLink.h"
+#include "Triangle.h"
 class Game
 {
 public:
@@ -20,8 +21,9 @@ public:
 	void run();
     void quit();
     
-    std::unique_ptr<GraphicEngine> m_graphicsEngine;
+    std::shared_ptr<GraphicEngine> m_graphicsEngine;
     std::unique_ptr<OWindow> m_display;
+    TriangleDemo* triangleDemo;
 private:
 	bool m_isRunning = true;
     DisplayLink* displayLink;

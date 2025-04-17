@@ -101,13 +101,37 @@ set(LIBRARY_SOURCE
 )
 
 add_library(
-    ${ENGINE_LIBRARY_NAME} 
+    ${ENGINE_LIBRARY_NAME}
     ${LIBRARY_SOURCE}
 )
 
 target_include_directories(${ENGINE_LIBRARY_NAME} PUBLIC  "../engine/src/Metal_ios/include/" "../engine/src/Metal_ios/include/Window/" "../engine/src/Metal_ios/include/Graphic/" "../engine/src/Metal_ios/include/Core/")
+
 target_link_libraries(${APP_NAME} ${ENGINE_LIBRARY_NAME})
 
+# 라이브러리 서브 디렉토리 추가
+add_subdirectory("../engine/demo" "${CMAKE_BINARY_DIR}/external/demo")
+# TestLibrary에서 메인 프로젝트 헤더를 사용할 수 있도록 include 경로 추가
+target_include_directories(TriangleTest PUBLIC  "../engine/src/Metal_ios/include/" "../engine/src/Metal_ios/include/Window/" "../engine/src/Metal_ios/include/Graphic/" "../engine/src/Metal_ios/include/Core/")
+
+target_include_directories(${ENGINE_LIBRARY_NAME} PUBLIC "../engine/demo")
+target_link_libraries(${ENGINE_LIBRARY_NAME} PUBLIC TriangleTest)
+target_link_libraries(${APP_NAME} TriangleTest)
+
+set(SHADER_SRC
+    ../engine/demo/shader_vs.metal
+    ../engine/demo/shader_ps.metal
+)
+target_sources(${APP_NAME}
+    PRIVATE
+    ${SHADER_SRC}
+)
+# Xcode에서 Metal로 인식시키기 위해 설정
+set_source_files_properties(${SHADER_SRC} PROPERTIES
+    LANGUAGE        Metal
+    VS_TOOL_OVERRIDE "metal"
+    COMPILE_FLAGS   "-fobjc-arc"
+)
 # Build tests
 add_subdirectory(tests)
 

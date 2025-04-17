@@ -21,23 +21,23 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
-#ifndef __VEC4_H__
-#define __VEC4_H__
+#ifndef __VEC3_H__
+#define __VEC3_H__
 #pragma once
 typedef float f32;
-class Vec4
+class Vec3
 {
 public:
-	Vec4()
+	Vec3()
 	{
 	}
-	Vec4(f32 x, f32 y, f32 z, f32 w) : x(x), y(y), z(z), w(w)
+	Vec3(f32 x, f32 y, f32 z) : x(x), y(y), z(z)
 	{
 	}
-	~Vec4()
+	~Vec3()
 	{
 	}
 public:
-	f32 x = 0, y = 0, z = 0, w = 0;
+	f32 x = 0, y = 0, z = 0;
 };
 #endif
