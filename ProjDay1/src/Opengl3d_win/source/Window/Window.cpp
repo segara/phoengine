@@ -1,10 +1,10 @@
-
+ï»¿
 //Windows
 
-#include "Window/OWindow.h"
-
+#include "Window/Window.h" 
 #include <cassert>
 #include <Windows.h>
+
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -12,7 +12,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
 		case WM_DESTROY:
 		{
-			OWindow* window = (OWindow*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
+			Window* window = (Window*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
 			window->onDestroy();
 			break;
 		}
@@ -20,7 +20,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			return DefWindowProc(hwnd, msg, wParam, lParam);
 	}
 }
-OWindow::OWindow()
+Window::Window()
 {
 	WNDCLASSEX wc = {};
 	wc.cbSize = sizeof(WNDCLASSEX);
@@ -31,28 +31,28 @@ OWindow::OWindow()
 
 	RECT rc = { 0,0, 1024, 768 };
 	AdjustWindowRect(&rc, WS_SYSMENU, false);
-	//lpWindowName : À§ÀÇ wndclassed ¿¡¼­ ÁöÁ¤ÇØÁØ lpszClassName
+	//lpWindowName : ìœ„ì˜ wndclassed ì—ì„œ ì§€ì •í•´ì¤€ lpszClassName
 	m_handle = CreateWindowEx(NULL, "gl3dWindow", "text", WS_SYSMENU , CW_USEDEFAULT , CW_USEDEFAULT, rc.right, rc.bottom, NULL, NULL, NULL, NULL);
 	assert(m_handle);
 
-	//À©µµ¿ìÀÇ ¼Ó¼º °ªÀ» ¼³Á¤ÇÒ ¶§ »ç¿ëµÇ´Â ÇÔ¼öÀÔ´Ï´Ù. 
+	//ìœˆë„ìš°ì˜ ì†ì„± ê°’ì„ ì„¤ì •í•  ë•Œ ì‚¬ìš©ë˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤. 
 	SetWindowLongPtr((HWND)m_handle, GWLP_USERDATA, (LONG_PTR)this);
 
 	ShowWindow((HWND)m_handle, SW_SHOW);
-	UpdateWindow((HWND)m_handle);	// ÁöÁ¤µÈ Ã¢¿¡ ´ëÇÑ ¾÷µ¥ÀÌÆ® ¿äÃ»À» Ã³¸®ÇÕ´Ï´Ù. ÀÌ ÇÔ¼ö´Â ÇØ´ç Ã¢ÀÇ Å¬¶óÀÌ¾ğÆ® ¿µ¿ªÀÌ ÇöÀç À¯È¿ÇÏÁö ¾ÊÀº °æ¿ì, WM_PAINT ¸Ş½ÃÁö¸¦ °­Á¦·Î º¸³»¾î Ã¢À» ´Ù½Ã ±×¸®µµ·Ï ÇÕ´Ï´Ù.
+	UpdateWindow((HWND)m_handle);	// ì§€ì •ëœ ì°½ì— ëŒ€í•œ ì—…ë°ì´íŠ¸ ìš”ì²­ì„ ì²˜ë¦¬í•©ë‹ˆë‹¤. ì´ í•¨ìˆ˜ëŠ” í•´ë‹¹ ì°½ì˜ í´ë¼ì´ì–¸íŠ¸ ì˜ì—­ì´ í˜„ì¬ ìœ íš¨í•˜ì§€ ì•Šì€ ê²½ìš°, WM_PAINT ë©”ì‹œì§€ë¥¼ ê°•ì œë¡œ ë³´ë‚´ì–´ ì°½ì„ ë‹¤ì‹œ ê·¸ë¦¬ë„ë¡ í•©ë‹ˆë‹¤.
 }
 
-OWindow::~OWindow()
+Window::~Window()
 {
 	DestroyWindow((HWND)m_handle);
 }
 
-void OWindow::onDestroy()
+void Window::onDestroy()
 {
 	m_handle = nullptr;
 }
 
-bool OWindow::isClosed()
+bool Window::isClosed()
 {
 	return !m_handle;
 }
