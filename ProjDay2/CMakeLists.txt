@@ -85,7 +85,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${DEP_INCLUDE_DIR})
 IF (WIN32)
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS})
 target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})
-add_dependencies(${PROJECT_NAME} ${DEP_LIST}) # Dependency들이 먼저 build 될 수 있게 관계 설정
+# add_dependencies(${PROJECT_NAME} ${DEP_LIST}) # Dependency들이 먼저 build 될 수 있게 관계 설정
 ELSEIF(APPLE)
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS} ${XCODE_FRAMEWORK})
 target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})

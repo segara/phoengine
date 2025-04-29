@@ -56,6 +56,6 @@ target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS})
 
 # Dependency들이 먼저 build 될 수 있게 관계 설정
-add_dependencies(${PROJECT_NAME} ${DEP_LIST})
+# add_dependencies(${PROJECT_NAME} ${DEP_LIST})
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
