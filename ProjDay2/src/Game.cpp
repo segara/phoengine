@@ -1,10 +1,10 @@
-#include "Game.h"
+ï»¿#include "Game.h"
 
-#include "Window/OWindow.h"
+#include "Window/Window.h"
 #include "Windows.h"
 Game::Game()
 {
-	m_display = std::make_unique<OWindow>();
+	m_display = std::make_unique<Window>();
 }
 Game::~Game()
 {
@@ -12,19 +12,18 @@ Game::~Game()
 }
 void Game:: run()
 {
-	
 	while(m_isRunning)
 	{
 		MSG msg = {};
 		if(PeekMessageA(&msg, NULL, NULL, NULL, PM_REMOVE))
 		{
-			if(msg.message == WM_QUIT) //WndProc¿¡¼­ º¸³½ ¸Ş¼¼Áö
+			if(msg.message == WM_QUIT) //WndProcì—ì„œ ë³´ë‚¸ ë©”ì„¸ì§€
 			{
 				m_isRunning = false;
 				continue;
 			}
-			TranslateMessage(&msg); //ÁÖ·Î WM_KEYDOWNÀÌ³ª WM_KEYUP ¸Ş½ÃÁö¸¦ WM_CHAR ¸Ş½ÃÁö·Î º¯È¯ÇÏ´Â ¿ªÇÒÀ» ÇÕ´Ï´Ù.
-			DispatchMessage(&msg);//ÇÔ¼ö´Â ¸Ş½ÃÁö Å¥¿¡¼­ ²¨³½ ¸Ş½ÃÁö¸¦ Àü´Ş¹Ş¾Æ, ÇØ´ç ¸Ş½ÃÁö¸¦ Ã³¸®ÇØ¾ß ÇÒ À©µµ¿ì ÇÁ·Î½ÃÀú·Î ¸Ş½ÃÁö¸¦ º¸³À´Ï´Ù.
+			TranslateMessage(&msg); //ì£¼ë¡œ WM_KEYDOWNì´ë‚˜ WM_KEYUP ë©”ì‹œì§€ë¥¼ WM_CHAR ë©”ì‹œì§€ë¡œ ë³€í™˜í•˜ëŠ” ì—­í• ì„ í•©ë‹ˆë‹¤.
+			DispatchMessage(&msg);//í•¨ìˆ˜ëŠ” ë©”ì‹œì§€ íì—ì„œ êº¼ë‚¸ ë©”ì‹œì§€ë¥¼ ì „ë‹¬ë°›ì•„, í•´ë‹¹ ë©”ì‹œì§€ë¥¼ ì²˜ë¦¬í•´ì•¼ í•  ìœˆë„ìš° í”„ë¡œì‹œì €ë¡œ ë©”ì‹œì§€ë¥¼ ë³´ëƒ…ë‹ˆë‹¤.
 
 		}
 		Sleep(1);

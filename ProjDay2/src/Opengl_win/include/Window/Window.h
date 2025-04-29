@@ -1,10 +1,10 @@
-#pragma once
+﻿#pragma once
 
-class OWindow
+class Window
 {
 public:
-	OWindow();
-	~OWindow();
+	Window();
+	~Window();
 
 private:
 	void* m_handle = nullptr;

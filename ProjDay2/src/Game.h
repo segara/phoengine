@@ -1,8 +1,7 @@
-#pragma once
+﻿#pragma once
 #include <memory>
 
-#include "Window/OWindow.h"
-#include "memory.h"
+#include "Window/Window.h"
 class Game
 {
 public:
@@ -11,9 +10,7 @@ public:
 	void run();
     void quit();
 private:
-
-	
 	bool m_isRunning = true;
-	std::unique_ptr<OWindow> m_display;
+	std::unique_ptr<Window> m_display;
 };
 

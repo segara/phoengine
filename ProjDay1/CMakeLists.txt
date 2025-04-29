@@ -46,6 +46,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/src
 ${CMAKE_CURRENT_SOURCE_DIR}/src/Opengl3d_win/source 
 ${CMAKE_CURRENT_SOURCE_DIR}/src/Opengl3d_win/include)
 
+
 #dependency 기능 사용
 include(Dependency.cmake)
 
@@ -53,12 +54,6 @@ include(Dependency.cmake)
 target_include_directories(${PROJECT_NAME} PUBLIC ${DEP_INCLUDE_DIR})
 target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS})
-
-target_compile_definitions(${PROJECT_NAME} PUBLIC
-    WINDOW_NAME="${WINDOW_NAME}"
-    WINDOW_WIDTH=${WINDOW_WIDTH}
-    WINDOW_HEIGHT=${WINDOW_HEIGHT}
-    )
 
 # Dependency들이 먼저 build 될 수 있게 관계 설정
 add_dependencies(${PROJECT_NAME} ${DEP_LIST})
