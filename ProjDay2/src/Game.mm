@@ -1,6 +1,6 @@
 #include "Game.h"
 
-#include "Window/OWindow.h"
+#include "Window/Window.h"
 #include <thread>
 #include <chrono>
 #import <Cocoa/Cocoa.h>
@@ -35,7 +35,7 @@ Game::Game()
     appDelegate = [[AppDelegate alloc] init];
     appDelegate.game = this;
     [NSApp setDelegate:appDelegate];//  set the delegate
-	m_display = std::make_unique<OWindow>();
+	m_display = std::make_unique<Window>();
     [NSApp run];
    
 }

@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.13)
 
 set(PROJECT_NAME phoengine_day2)
 set(CMAKE_CXX_STANDARD 17)
@@ -30,7 +30,7 @@ set(APP_HEADERS
 )
 ELSEIF(APPLE)
 set(ENGINE_SOURCES
-    src/Metal_osx/source/Window/Window.cpp
+    src/Metal_osx/source/Window/Window.mm
     # 추가 엔진 소스 파일들...
 )
 set(ENGINE_HEADERS

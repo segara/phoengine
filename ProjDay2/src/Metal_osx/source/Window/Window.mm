@@ -1,7 +1,7 @@
 
 //Windows
 
-#include "Window/OWindow.h"
+#include "Window/Window.h"
 #import <Cocoa/Cocoa.h>
 #include <cassert>
 
@@ -18,7 +18,7 @@
 @end
 
 
-OWindow::OWindow()
+Window::Window()
 {
 	// Cocoa 창 생성
     NSRect frame = NSMakeRect(0, 0, 1024, 768);
@@ -33,7 +33,7 @@ OWindow::OWindow()
    
 }
 
-OWindow::~OWindow()
+Window::~Window()
 {
 	
 }
