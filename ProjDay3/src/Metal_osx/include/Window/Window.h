@@ -1,10 +1,10 @@
 #pragma once
 
-class OWindow
+class Window
 {
 public:
-	OWindow();
-	~OWindow();
+	Window();
+	~Window();
     void Present(bool vsync);
 
 	void* m_handle = nullptr;

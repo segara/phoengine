@@ -13,6 +13,7 @@
 class GraphicEngine
 {
 public:
+    ///hwnd : NSView
 	GraphicEngine(void* hwnd);
 	~GraphicEngine();
 

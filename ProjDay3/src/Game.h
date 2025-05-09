@@ -2,7 +2,7 @@
 #include <memory>
 
 
-#include "Window/OWindow.h"
+#include "Window/Window.h"
 #include "Graphic/GraphicEngine.h"
 #include "memory.h"
 class Game
@@ -22,6 +22,6 @@ private:
 	
 	bool m_isRunning = true;
 	std::unique_ptr<GraphicEngine> m_graphicsEngine;
-	std::unique_ptr<OWindow> m_display;
+	std::unique_ptr<Window> m_display;
 };
 

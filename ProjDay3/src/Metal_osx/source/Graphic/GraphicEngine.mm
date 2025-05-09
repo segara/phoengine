@@ -10,21 +10,23 @@ GraphicEngine::GraphicEngine(void* hwnd)
           throw std::runtime_error("Failed to create Metal device");
       }
 
-      // CAMetalLayer 생성 및 설정 = opengl HDC
+    // CAMetalLayer 생성 및 설정 = opengl HDC
     // 현재 프레임 버퍼
     // Attach CAMetalLayer to the NSView
+    //NSView는 "어디에 있는지"를 결정하고,
+    //CALayer는 "어떻게 보이는지"를 결정
      NSView* view = static_cast<NSView*>(hwnd);
      metalLayer = [CAMetalLayer layer];
      metalLayer.device = device;
      metalLayer.pixelFormat = MTLPixelFormatBGRA8Unorm;
      metalLayer.framebufferOnly = YES;
      metalLayer.frame = view.bounds;
-    view.layer = metalLayer;
-       view.wantsLayer = YES;
+     view.layer = metalLayer;
+     view.wantsLayer = YES;
 
-        //Metal 명령 큐 생성
+      //Metal 명령 큐 생성
   
-        commandQueue = [device newCommandQueue];
+     commandQueue = [device newCommandQueue];
        if (!commandQueue) {
            throw std::runtime_error("Failed to create Metal command queue");
        }

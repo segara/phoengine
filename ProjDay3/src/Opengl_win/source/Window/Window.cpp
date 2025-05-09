@@ -1,7 +1,7 @@
 
 //Windows
 
-#include "Window/OWindow.h"
+#include "Window/Window.h"
 #include "glad/gl.h"
 #include "glad/wgl.h"
 #include <Windows.h>
@@ -14,7 +14,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
 		case WM_DESTROY:
 		{
-			//OWindow* window = (OWindow*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
+			//Window* window = (Window*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
 			break;
 		}
 		case WM_CLOSE:
@@ -26,7 +26,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			return DefWindowProc(hwnd, msg, wParam, lParam);
 	}
 }
-OWindow::OWindow()
+Window::Window()
 {
 	WNDCLASSEX wc = {};
 	wc.cbSize = sizeof(WNDCLASSEX);
@@ -38,25 +38,25 @@ OWindow::OWindow()
 
 	RECT rc = { 0,0, 1024, 768 };
 	AdjustWindowRect(&rc, WS_SYSMENU, false);
-	//lpWindowName : À§ÀÇ wndclassed ¿¡¼­ ÁöÁ¤ÇØÁØ lpszClassName
+	//lpWindowName : ï¿½ï¿½ï¿½ï¿½ wndclassed ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ lpszClassName
 	m_handle = CreateWindowEx(NULL, MAKEINTATOM(classId), "text", WS_SYSMENU , CW_USEDEFAULT , CW_USEDEFAULT, rc.right, rc.bottom, NULL, NULL, NULL, NULL);
 	assert(m_handle);
 
-	//À©µµ¿ìÀÇ ¼Ó¼º °ªÀ» ¼³Á¤ÇÒ ¶§ »ç¿ëµÇ´Â ÇÔ¼öÀÔ´Ï´Ù. 
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½ï¿½Ô´Ï´ï¿½. 
 	SetWindowLongPtr((HWND)m_handle, GWLP_USERDATA, (LONG_PTR)this);
 
 	ShowWindow((HWND)m_handle, SW_SHOW);
-	UpdateWindow((HWND)m_handle);	// ÁöÁ¤µÈ Ã¢¿¡ ´ëÇÑ ¾÷µ¥ÀÌÆ® ¿äÃ»À» Ã³¸®ÇÕ´Ï´Ù. ÀÌ ÇÔ¼ö´Â ÇØ´ç Ã¢ÀÇ Å¬¶óÀÌ¾ðÆ® ¿µ¿ªÀÌ ÇöÀç À¯È¿ÇÏÁö ¾ÊÀº °æ¿ì, WM_PAINT ¸Þ½ÃÁö¸¦ °­Á¦·Î º¸³»¾î Ã¢À» ´Ù½Ã ±×¸®µµ·Ï ÇÕ´Ï´Ù.
+	UpdateWindow((HWND)m_handle);	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ã»ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Õ´Ï´ï¿½. ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ Ã¢ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, WM_PAINT ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 
 
 }
 
-OWindow::~OWindow()
+Window::~Window()
 {
 	//DestroyWindow((HWND)m_handle);
 }
 
-void OWindow::Present(bool vsync)
+void Window::Present(bool vsync)
 {
 	HDC dummyDC = GetDC((HWND)m_handle);
 	//wglSwapIntervalEXT(vsync);
